@@ -1,0 +1,162 @@
+.header {
+    @include tablet {
+        // z-index: -1;
+        // z-index: 999999999;
+    }
+
+
+    &-topbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+        
+        @include tablet {
+            position: relative;
+            padding: 2.5rem 10.6rem;
+            background-color: var(--light-gray);
+            z-index: 5555;
+        }
+
+        &-logo {
+            height: 1.6rem;
+        }
+        
+    }
+
+
+
+    // HERO section
+    &-hero {
+        @include tablet {
+            position: relative;
+            z-index:inherit;
+        }
+        
+
+        // BG imagen derecha desktop
+        &::before {
+            @include tablet {
+                content: url("../assets/images/bg-pattern-intro-right-desktop.svg");
+                position: absolute;
+                top: -75px;
+                right: 0;
+                z-index: 1;
+
+            }
+        }
+
+        &::after {
+            @include tablet {
+                content: url("../assets/images/bg-pattern-intro-left-desktop.svg");
+                position: absolute;
+                left: 0;
+                top: 27rem;
+
+            }
+        }
+
+        @include tablet {
+            display: flex;            
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            background-color: var(--violet-color);
+            padding: 0 10.6rem;
+            position: relative;
+
+        }
+
+        
+    }
+
+    &-image {
+        @include tablet {
+            margin-top: 6rem;
+            margin-bottom: -9rem;
+        }
+    }
+
+    &-img {
+        display: block; //para eliminar el extraño margen de abajo ()
+        width: 100%;
+
+
+    }
+
+    &-info-container {
+        background-image: url("../assets/images/bg-pattern-intro-left-mobile.svg");
+        background-repeat: no-repeat;
+        background-color: var(--violet-color);
+        text-align: center;
+        padding: 6.5rem 0;
+        position: relative;
+        z-index: 3;
+
+        @include tablet {
+            background-color: initial;
+            text-align: left;
+            width: 550px;
+            background-image: initial;
+            z-index: 8;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            background-image: url("../assets/images/bg-pattern-intro-right-mobile.svg");
+            background-position-x: 200px;
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            margin-top: 4rem;
+            z-index: -2;
+
+            @include tablet {
+                background-image: initial;
+            }
+        }
+    }
+
+    &-title {
+        color: var(--light-gray);
+        font-size: 2.95rem;
+        line-height: 1;
+        font-weight: 400;
+        margin: 0 1.5rem 1rem 1.5rem;
+        position: relative;
+
+        @include tablet {
+            font-size: 4.2rem;
+            margin: 0rem 4rem 2rem 0;
+            padding-top: 3rem;
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 30%;
+                height: 2px;
+                top: 0;
+                left: 0;
+                background-color: var(--light-gray);
+
+            }
+        }
+    }
+
+    &-text {
+        margin: 0 1.5rem;
+        color: var(--light-gray);
+        font-size: 1.04rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+
+        @include tablet {
+            margin: 0 0 3rem 0;
+        }
+    }
+
+}

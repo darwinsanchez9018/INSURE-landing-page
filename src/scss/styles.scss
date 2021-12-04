@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+
+@import "config/variables";
+@import "base/base";
+@import "mixins/reset-list";
+@import "mixins/breakpoints";
+@import "mixins/hover";
+
+
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/menu-mobile";
+@import "blocks/main";
+@import "blocks/buttons";
+@import "blocks/article";
+@import "blocks/section";
+@import "blocks/aside";
+@import "blocks/footer";
+
+@import "blocks/socials";
+@import "blocks/sitemap";
+@import "blocks/copy";

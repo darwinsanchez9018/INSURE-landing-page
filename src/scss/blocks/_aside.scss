@@ -1,0 +1,46 @@
+.aside {
+    position: relative;
+    text-align: center;
+    margin: 0 1.5rem;
+    padding: 4rem 1.5rem;
+    padding-bottom: 5rem;
+    background-color: var(--violet-color);
+    color: var(--light-gray);
+    margin-bottom: 9rem;
+
+    background-image: url("../assets/images/bg-pattern-how-we-work-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+
+    @include tablet {
+        margin: 0 10.6rem;
+        background-image: url("../assets/images/bg-pattern-how-we-work-desktop.svg");
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 6rem;
+        margin-bottom: 10rem;
+
+    }
+
+
+    &__title {
+        margin: 0;
+        margin-bottom: 3.5rem;
+        font-size: 2.5rem;
+        line-height: 1;
+        font-weight: 400;
+        @include tablet {
+            font-size: 3.5rem;
+            margin: 0;
+            width: 55%;
+            text-align: left;
+        }
+    }
+
+}
+
+
+

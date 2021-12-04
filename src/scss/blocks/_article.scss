@@ -1,0 +1,41 @@
+.article {
+
+    
+    &-title {
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 11rem;
+        position: relative;
+        margin-bottom: 4.5rem;
+
+        @include tablet {
+            text-align: left;
+            font-size: 4.5rem;
+            padding-top: 20rem;
+        }
+
+
+        // Línea superior
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 10rem;
+            height: 1px;
+            background-color: var(--violet-color);
+            top: 9rem;
+            right: 0;
+            left: 0;
+            opacity: 50%;
+            margin-right: auto;
+            margin-left: auto;
+
+            @include tablet {
+                left: 0;
+                right: unset;
+                top: 17rem;
+            }
+        }
+    }
+}

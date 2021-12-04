@@ -1,0 +1,12 @@
+#menu-btn {
+    font-size: 1rem;
+    color: var(--dark-violet);
+    border: 2px solid var(--dark-violet);
+    padding: .4rem;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+    @include mobile {
+        display: initial;
+    }
+}

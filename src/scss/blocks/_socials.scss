@@ -1,0 +1,22 @@
+.socials {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include tablet {
+        margin: 0;
+    }
+
+    &__link {
+        font-size: 1.8rem;
+        color: var(--grayish-violet);
+
+        @include hover {
+            color: var(--dark-violet);
+        }
+    }
+}

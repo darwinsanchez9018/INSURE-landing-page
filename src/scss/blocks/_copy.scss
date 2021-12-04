@@ -1,0 +1,21 @@
+.copy {
+    text-align: center;
+
+
+    &__text {
+        text-align: center;
+        padding-bottom: .5rem;
+
+
+    }
+    &__link {
+        text-decoration: none;
+        color: var(--grayish-violet);
+        font-weight: 700;
+
+        @include hover {
+            // text-decoration: underline;
+            border-bottom: 1px solid var(--grayish-violet);
+        }
+    }
+}

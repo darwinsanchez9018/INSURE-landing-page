@@ -1,0 +1,83 @@
+.mainMenu {
+    @include reset-list;
+    
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    padding: 3rem 0 0 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: var(--dark-violet);
+    transform: scale(0);
+    opacity: 0;
+    transition: none;
+    z-index: 4;
+
+
+    // MENÚ mobile pattern
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url("../assets/images/bg-pattern-mobile-nav.svg");
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        bottom: 5rem;
+        left: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+
+    }
+
+    // MENÚ horizontal NAV
+    @include tablet {
+        position: relative;
+        display: flex;
+        gap: 2rem;
+        top: 0;
+        padding: 0;
+        width:100%;
+        height: initial;
+        background-color: transparent;
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--light-gray);
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 2.5rem;
+        position: relative;
+
+        @include tablet {
+            display: initial;
+            margin: 0;
+            font-size: .92rem;
+            color: var(--grayish-violet);
+            text-transform: initial;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            @include hover {
+                color: var(--dark-violet);
+            }
+        }
+
+    }
+}
+
+
+/* -------- Nav activo con la clase ".active */
+.mainMenu.active {
+    transform: scale(1);
+    opacity: 1;
+    transition: .2s ease-out;
+}

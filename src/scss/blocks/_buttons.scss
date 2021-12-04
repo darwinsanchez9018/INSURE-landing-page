@@ -1,0 +1,36 @@
+.button {
+    text-decoration: none;
+    border: 2px solid var(--light-gray);
+    font-size: .85rem;
+    padding: .7rem 2rem;
+    color: var(--light-gray);
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+
+    @include hover {
+        background-color: var(--light-gray);
+        color: var(--dark-violet);
+    }
+
+
+    // BOTÓN del menú principal horizontal
+    &--primary {
+        border: 2px solid var(--light-gray);
+        margin: 0 1.5rem;
+        padding: 1rem 0;
+        
+        @include tablet {
+            margin: 0;
+            border: 2px solid var(--violet-color);
+            color: var(--violet-color);
+            padding: .9rem 2rem;
+
+            @include hover {
+                background-color: var(--dark-violet);
+                color: var(--light-gray);
+            }
+        }
+        
+    }
+}
